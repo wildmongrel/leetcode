@@ -29,4 +29,19 @@ class SolutionTest {
     fun tc003() {
         assertEquals(4,solution.maxSubarrayLength(intArrayOf(5,5,5,5,5,5,5),4))
     }
+
+    @Test
+    fun tc004() {
+        assertEquals(1,solution.maxSubarrayLength(intArrayOf(1),1))
+    }
+
+    @Test
+    fun tc005() {
+        assertEquals(3,solution.maxSubarrayLength(intArrayOf(1,1,1,3),2))
+    }
+
+    @Test
+    fun tc006() {
+        assertEquals(3,solution.maxSubarrayLength(intArrayOf(2,1,2,3),1))
+    }
 }
