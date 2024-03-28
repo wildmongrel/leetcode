@@ -1,14 +1,15 @@
-package co.pipat.practice.leetcode.problem
+package co.pipat.practice.leetcode.problem.p234
 
+import co.pipat.practice.leetcode.common.ListNode
 import java.util.*
 
 /*
 * 234. Palindrome Linked List
 * https://leetcode.com/problems/palindrome-linked-list
 * */
-class P234 {
+class Solution {
 
-    fun isPalindrome(head:ListNode?): Boolean {
+    fun isPalindrome(head: ListNode?): Boolean {
         var h = head
         var slow = head
         var fast = head!!.next
@@ -52,7 +53,7 @@ class P234 {
     }
 
     // stack
-    fun isPalindromeV2(head:ListNode?): Boolean {
+    fun isPalindromeV2(head: ListNode?): Boolean {
         if(head==null||head?.next==null)
             return true
 
@@ -96,7 +97,7 @@ class P234 {
         var a:StringBuilder = StringBuilder()
         var b:StringBuilder = StringBuilder()
         var size = 0;
-        var cur:ListNode?=head
+        var cur: ListNode?=head
 
         do{
             a.append(cur?.`val`)
@@ -106,9 +107,5 @@ class P234 {
         }while(cur!=null)
 
         return a.substring(0,size/2).equals(b.substring(0,size/2))
-    }
-
-    class ListNode(var `val`: Int) {
-        var next: ListNode? = null
     }
 }

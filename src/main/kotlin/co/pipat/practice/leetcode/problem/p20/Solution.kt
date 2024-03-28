@@ -1,4 +1,4 @@
-package co.pipat.practice.leetcode.problem
+package co.pipat.practice.leetcode.problem.p20
 
 import java.util.*
 
@@ -6,7 +6,7 @@ import java.util.*
 * 20. Valid Parentheses
 * https://leetcode.com/problems/valid-parentheses/description/
 * */
-class P20{
+class Solution{
     fun isValid(s: String): Boolean {
         var stack = Stack<Char>()
 

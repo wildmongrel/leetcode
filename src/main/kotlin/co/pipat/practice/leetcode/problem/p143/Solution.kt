@@ -1,12 +1,13 @@
-package co.pipat.practice.leetcode.problem
+package co.pipat.practice.leetcode.problem.p143
 
+import co.pipat.practice.leetcode.common.ListNode
 import java.util.*
 
 /*
 * 143. Reorder List
 * https://leetcode.com/problems/reorder-list/description
 * */
-class P143 {
+class Solution {
     fun reorderList(head: ListNode?): Unit {
         if(head?.next==null||head?.next?.next==null){
             return
@@ -15,10 +16,10 @@ class P143 {
         var stack = Stack<ListNode>()
         var slow = head
         var fast = head.next
-        var pop:ListNode?=null
-        var cur:ListNode?=null
-        var next:ListNode?=null
-        var prev:ListNode?=null
+        var pop: ListNode?=null
+        var cur: ListNode?=null
+        var next: ListNode?=null
+        var prev: ListNode?=null
         stack.push(slow)
         while(fast!=null&&fast.next!=null){
             prev = slow
@@ -41,10 +42,5 @@ class P143 {
             prev = pop//prev
             println("cur,[pop]: ${cur?.`val`},[${pop.`val`}->${pop.next?.`val`}]")
         }
-    }
-
-    /**/
-    class ListNode(var `val`: Int) {
-        var next: ListNode? = null
     }
 }

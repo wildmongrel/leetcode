@@ -1,5 +1,6 @@
 package co.pipat.practice.leetcode.problem
 
+import co.pipat.practice.leetcode.problem.p20.Solution
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 
@@ -7,9 +8,9 @@ import org.junit.jupiter.api.Assertions.*
 import org.mockito.InjectMocks
 import org.mockito.MockitoAnnotations
 
-class P20KtTest {
+class SolutionKtTest {
     @InjectMocks
-    lateinit var p:P20
+    lateinit var p: Solution
 
     @BeforeEach
     fun setUp() {

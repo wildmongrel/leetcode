@@ -1,17 +1,16 @@
 package co.pipat.practice.leetcode.problem
 
+import co.pipat.practice.leetcode.common.ListNode
+import co.pipat.practice.leetcode.problem.p143.Solution
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
-
-import org.junit.jupiter.api.Assertions.*
-import org.junit.jupiter.params.ParameterizedTest
-import org.junit.jupiter.params.provider.CsvSource
 import org.mockito.InjectMocks
 import org.mockito.MockitoAnnotations
 
-class P143Test {
+class SolutionTest {
     @InjectMocks
-    lateinit var p:P143
+    lateinit var p: Solution
     @BeforeEach
     fun setUp() {
         MockitoAnnotations.openMocks(this)
@@ -19,8 +18,8 @@ class P143Test {
 
     @Test
     fun tc001() {
-        var head = P143.ListNode(1)
-        var tail:P143.ListNode? = head
+        var head = ListNode(1)
+        var tail: ListNode? = head
 
         tail = append(tail,2)
         tail = append(tail,3)
@@ -45,8 +44,8 @@ class P143Test {
 
     @Test
     fun tc002() {
-        var head = P143.ListNode(1)
-        var tail:P143.ListNode? = head
+        var head = ListNode(1)
+        var tail: ListNode? = head
 
         tail = append(tail,2)
         tail = append(tail,3)
@@ -70,9 +69,9 @@ class P143Test {
         assertEquals(3,tail?.`val`)
     }
 
-    private fun append(tail: P143.ListNode?, i: Int): P143.ListNode? {
+    private fun append(tail: ListNode?, i: Int): ListNode? {
         if(tail!=null){
-            var n = P143.ListNode(i)
+            var n = ListNode(i)
             tail.next = n
             return n
         }
