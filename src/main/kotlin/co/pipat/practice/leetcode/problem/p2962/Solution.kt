@@ -11,10 +11,7 @@ class Solution {
     fun countSubarrays(nums: IntArray, k: Int): Long {
         var ans = 0L;
         var count = 0L
-        var end:Int
-        var map = LinkedHashMap<Int,Int>()
         var max = Int.MIN_VALUE
-        var n:Int
         var left = 0
         var right = 0
 
