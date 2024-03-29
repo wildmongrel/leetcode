@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Assertions.*
 import org.mockito.InjectMocks
 import org.mockito.MockitoAnnotations
 
-class SolutionTest {
+class SolutionV0Test {
     @InjectMocks
     lateinit var solution: Solution
     @BeforeEach
